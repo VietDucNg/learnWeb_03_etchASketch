@@ -11,9 +11,18 @@
 }
 
 /* body */
+* {
+    border: 1px solid black;
+}
+
+
 
 /* style header */
 
-/* style block 1 */
+/* style sketchBoard */
+.sketchBoard {
+    width: 500px;
+    height: 500px;
+}
 
 /* style footer */
