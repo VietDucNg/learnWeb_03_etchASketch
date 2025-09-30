@@ -12,7 +12,33 @@
         <!-- link my js -->
         <script type="module" src="js/main.js"></script>
     </head>
-    <body>
-        <div class="sketchBoard row"></div>
+    <body class="column">
+        <header class="header row">
+            <h1 class="title">Etch A Sketch</h1>
+        </header>
+
+        <div class="block1 row">
+            <div class="functions column">
+                <div class="colorChoiceGroup row">
+                    <button class="singleColorBtn">singleColorBtn</button>
+                    <button class="colorChoiceBtn">colorChoiceBtn</button>
+                </div>
+                <button class="randomColorBtn">randomColorBtn</button>
+                <button class="eraserBtn">eraserBtn</button>
+                <button class="clearBtn">clearBtn</button>
+                <div class="sliderDiv row">
+                    <label class="sliderLable" for=".slider">Pixels</label>
+                    <div class="column">
+                        <p class="pixelInfo">test</p>
+                        <input type="range" min="1" max="50" value="50" class="slider">
+                    </div>
+                </div>
+            </div>
+            <div class="sketchBoard row"></div>
+        </div>
+
+        <footer class="footer row">
+            <p>Copyright © <a href="https://vietducng.github.io/">Viet Nguyen</a> 2025</p>
+        </footer>
     </body>
 </html>
