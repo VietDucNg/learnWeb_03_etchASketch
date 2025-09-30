@@ -1,0 +1,19 @@
+/* global style */
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* body */
+
+/* style header */
+
+/* style block 1 */
+
+/* style footer */
