@@ -11,21 +11,23 @@ for (let i=1;i<=numGrid*numGrid;i++) {
     sketchBoard.appendChild(grid);
 }
 
+// drawing feature
 const grids = document.querySelectorAll('.grid');
-let isDrawing = false;
 
 function changeBgColor() {
-    isDrawing = true;
     this.style.backgroundColor = 'black';
 }
 
-grids.forEach(grid => {
-  grid.addEventListener('mousedown', changeBgColor);
-  grid.addEventListener('mouseover', function() {
-    if (isDrawing) this.style.backgroundColor = 'black';
-  });
-});
+function mousedownOnGrid() {
+    this.style.backgroundColor = 'black';
+    grids.forEach(grid => grid.addEventListener('mousemove',changeBgColor));
+    document.addEventListener('mouseup',stopDrawing);
+}
 
-document.addEventListener('mouseup', function() {
-  isDrawing = false;
-});
+function stopDrawing() {
+    grids.forEach(grid => grid.removeEventListener('mousemove',changeBgColor));
+    document.removeEventListener('mouseup',stopDrawing);
+}
+
+grids.forEach(grid => grid.addEventListener('mousedown',mousedownOnGrid));
+
