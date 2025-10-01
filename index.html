@@ -9,34 +9,45 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/backbone.css">
         <link rel="stylesheet" href="css/style.css">
+        <!-- link press start 2P font -->
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'>
         <!-- link my js -->
         <script type="module" src="js/main.js"></script>
     </head>
     <body class="column">
         <div class="block1 row">
-            <div class="functions column">
-                <header class="header row">
-                    <h1 class="title">Etch A Sketch</h1>
-                </header>
-                <div class="colorChoiceGroup row">
-                    <button class="singleColorBtn">singleColorBtn</button>
-                    <button class="colorChoiceBtn">colorChoiceBtn</button>
-                </div>
-                <button class="randomColorBtn">randomColorBtn</button>
-                <button class="eraserBtn">eraserBtn</button>
-                <button class="clearBtn">clearBtn</button>
-                <div class="sliderDiv row">
-                    <label class="sliderLable" for=".slider">Pixels</label>
-                    <div class="column">
-                        <p class="pixelInfo">16 x 16</p>
-                        <input type="range" min="1" max="60" value="16" class="slider">
+            <div class="block1-content row">
+                <div class="functions column">
+                    <header class="row">
+                        <h1 class="title">Etch A Sketch</h1>
+                    </header>
+                    <div class="colorChoiceGroup row">
+                        <button class="singleColorBtn">singleColorBtn</button>
+                        <button class="colorChoiceBtn">colorChoiceBtn</button>
+                    </div>
+                    <div class="randomColorDiv row">
+                        <button class="randomColorBtn">randomColorBtn</button>
+                    </div>
+                    <div class="eraserDiv row">
+                        <button class="eraserBtn">eraserBtn</button>
+                    </div>
+                    <div class="clearDiv row">
+                        <button class="clearBtn">clearBtn</button>
+                    </div>
+                    <div class="sliderDiv row">
+                        <label class="sliderLable row" for=".slider">Pixels</label>
+                        <div class="sliderDiv-content column">
+                            <p class="pixelInfo row">16 x 16</p>
+                            <input type="range" min="1" max="60" value="16" class="slider">
+                        </div>
                     </div>
                 </div>
+                <div class="sketchBoard row"></div>
             </div>
-            <div class="sketchBoard row"></div>
         </div>
 
-        <footer class="footer row">
+        <footer class="row">
             <p>Copyright © <a href="https://vietducng.github.io/">Viet Nguyen</a> 2025</p>
         </footer>
     </body>
