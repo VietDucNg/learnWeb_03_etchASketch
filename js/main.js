@@ -6,6 +6,8 @@ let numGrid = 16;
 
 function drawGrid(numGrid) {
     let gridSize = sketchBoard.offsetWidth/numGrid;
+    console.log(sketchBoard.offsetWidth)
+    console.log(gridSize)
     for (let i=1;i<=(numGrid*numGrid);i++) {
         let grid = document.createElement('div');
         grid.style.cssText = `width:${gridSize}px;height:${gridSize}px`;
