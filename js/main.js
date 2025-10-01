@@ -18,6 +18,8 @@ drawGrid(numGrid);
 
 
 // feature to draw
+let grids = getAllGrids();
+
 function getAllGrids() {
     return document.querySelectorAll('.grid');
 }
@@ -27,24 +29,22 @@ function changeBgColor() {
 }
 
 function mousedownOnGrid() {
-    this.style.backgroundColor = 'black';
-    let grids = getAllGrids();
+    changeBgColor;
     grids.forEach(grid => grid.addEventListener('mousemove',changeBgColor));
     document.addEventListener('mouseup',stopDrawing);
 }
 
 function stopDrawing() {
-    let grids = getAllGrids();
     grids.forEach(grid => grid.removeEventListener('mousemove',changeBgColor));
     document.removeEventListener('mouseup',stopDrawing);
 }
 
 function applyDrawListener () {
-    let grids = getAllGrids();
     grids.forEach(grid => grid.addEventListener('mousedown',mousedownOnGrid));
 };
 
 applyDrawListener();
+
 
 // feature to change number of grid pixels
 function updatePixelInfo (numGrid){
@@ -59,7 +59,7 @@ function changeNumGrid (numGrid, grids) {
 slider.addEventListener('input', function() {
     let numGrid = slider.value;
     updatePixelInfo(numGrid);
-    let grids = getAllGrids();
     changeNumGrid(numGrid, grids);
+    grids = getAllGrids();
     applyDrawListener();
 })
