@@ -1,13 +1,16 @@
 const DEFAULT_NUM_GRID = 16;
 const DEFAULT_COLOR = '#00aafb';
+const BACKGROUND_COLOR = 'antiquewhite';
 
 const sketchBoard = document.querySelector('.sketchBoard');
 const slider = document.querySelector('.slider');
 const pixelInfo = document.querySelector('.pixelInfo');
 const singleColorBtn = document.querySelector('.singleColorBtn');
 const colorChoiceBtn = document.querySelector('.colorChoiceBtn');
+const randomColorBtn = document.querySelector('.randomColorBtn');
+const eraserBtn = document.querySelector('.eraserBtn');
+const clearBtn = document.querySelector('.clearBtn');
 const functionBtns = document.querySelectorAll('.functions-left button:not(.clearBtn');
-
 
 let numGrid = DEFAULT_NUM_GRID;
 let color = DEFAULT_COLOR;
@@ -30,6 +33,13 @@ function getAllGrids() {
 function changeBgColor() {
     if (singleColorBtn.classList.contains('active')) {
         this.style.backgroundColor = color;
+    } else if (randomColorBtn.classList.contains('active')) {
+        let randomR = Math.floor(Math.random() * 256);
+        let randomG = Math.floor(Math.random() * 256);
+        let randomB = Math.floor(Math.random() * 256);
+        this.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
+    } else if (eraserBtn.classList.contains('active')) {
+        this.style.backgroundColor = BACKGROUND_COLOR;
     }
 }
 
