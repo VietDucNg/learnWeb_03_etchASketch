@@ -1,6 +1,6 @@
 const DEFAULT_NUM_GRID = 16;
 const DEFAULT_COLOR = '#00aafb';
-const DEFAULT_BACKGROUND_COLOR = 'antiquewhite';
+const DEFAULT_BACKGROUND_COLOR = '#fcebd8';
 
 const sketchBoard = document.querySelector('.sketchBoard');
 const slider = document.querySelector('.slider');
