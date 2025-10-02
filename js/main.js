@@ -50,20 +50,23 @@ function updatePixelInfo (numGrid){
     pixelInfo.textContent = `${numGrid} x ${numGrid}`;
 }
 
-function changeNumGrid (numGrid, grids) {
+function removeGrids(grids) {
     grids.forEach(grid => sketchBoard.removeChild(grid));
-    drawGrid(numGrid);
 }
 
-slider.addEventListener('input', function() {
-    let numGrid = slider.value;
-    updatePixelInfo(numGrid);
-    changeNumGrid(numGrid, grids);
-    grids = getAllGrids();
-    applyDrawListener();
+function applyChangNumGridListener() {
+    slider.addEventListener('input', function() {
+        let numGrid = slider.value;
+        let grids = getAllGrids();
+        updatePixelInfo(numGrid);
+        removeGrids(grids);
+        drawGrid(numGrid);
+        applyDrawListener();
 })
+}
 
 window.addEventListener('load', function() {
   drawGrid(numGrid);
   applyDrawListener();
+  applyChangNumGridListener();
 });
