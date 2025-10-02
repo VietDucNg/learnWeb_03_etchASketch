@@ -81,7 +81,7 @@ function applyChangNumGridListener() {
 })
 }
 
-// ////////////
+// color mode
 function clearActiveClass() {
     functionBtns.forEach(btn => btn.classList.remove('active'));
 }
