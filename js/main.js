@@ -84,16 +84,21 @@ function updateColor() {
     color = colorChoiceBtn.value;
 }
 
-functionBtns.forEach(btn => btn.addEventListener('click', function () {
-    clearActiveClass();
-    toggleActiveClass(btn);
-}));
+function applyActiveModeListener() {
+    functionBtns.forEach(btn => btn.addEventListener('click', function () {
+        clearActiveClass();
+        toggleActiveClass(btn);
+    }));
+}
 
-colorChoiceBtn.addEventListener('input', updateColor);
-
+function applyColorChoiceListener() {
+    colorChoiceBtn.addEventListener('input', updateColor);
+}
 
 window.addEventListener('load', function() {
-  drawGrid(numGrid);
-  applyDrawListener();
-  applyChangNumGridListener();
+    drawGrid(numGrid);
+    applyDrawListener();
+    applyChangNumGridListener();
+    applyActiveModeListener();
+    applyColorChoiceListener();
 });
