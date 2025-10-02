@@ -1,6 +1,6 @@
 const DEFAULT_NUM_GRID = 16;
 const DEFAULT_COLOR = '#00aafb';
-const BACKGROUND_COLOR = 'antiquewhite';
+const DEFAULT_BACKGROUND_COLOR = 'antiquewhite';
 
 const sketchBoard = document.querySelector('.sketchBoard');
 const slider = document.querySelector('.slider');
@@ -39,7 +39,7 @@ function changeBgColor() {
         let randomB = Math.floor(Math.random() * 256);
         this.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
     } else if (eraserBtn.classList.contains('active')) {
-        this.style.backgroundColor = BACKGROUND_COLOR;
+        this.style.backgroundColor = DEFAULT_BACKGROUND_COLOR;
     }
 }
 
@@ -105,10 +105,20 @@ function applyColorChoiceListener() {
     colorChoiceBtn.addEventListener('input', updateColor);
 }
 
+function clearGrid() {
+    let grids = getAllGrids();
+    grids.forEach(grid => grid.style.backgroundColor = DEFAULT_BACKGROUND_COLOR)
+}
+
+function applyClearGridListener() {
+   clearBtn.addEventListener('click',clearGrid) 
+}
+
 window.addEventListener('load', function() {
     drawGrid(numGrid);
     applyDrawListener();
     applyChangNumGridListener();
     applyActiveModeListener();
     applyColorChoiceListener();
+    applyClearGridListener();
 });
