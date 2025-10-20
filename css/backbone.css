@@ -38,7 +38,7 @@ h1 {
 }
 
 .block1-left {
-    width: 600px
+    width: 15rem
 }
 
 .functions {
@@ -79,8 +79,8 @@ h1 {
 }
 
 .sketchBoard {
-    width: 600px;
-    height: 600px;
+    width: 15rem;
+    height: 15rem;
 }
 
 footer {
