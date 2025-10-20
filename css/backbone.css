@@ -9,8 +9,8 @@
     flex-wrap: wrap;
 }
 
-html {
-    font-size: 40px;
+.nowrap {
+    flex-wrap: nowrap;
 }
 
 body {

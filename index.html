@@ -1,53 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Etch A Sketch game</title>
-        <!-- link font -->
-        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-        <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'>
-        <!-- link my css -->
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/backbone.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/colorPicker.css">
-        <!-- link my js -->
-        <script type="module" src="js/main.js"></script>
-    </head>
-    <body class="column">
-        <div class="block1 row">
-            <div class="block1-content row">
-                <div class="block1-left column">
-                    <header class="row">
-                        <h1 class="title">Etch A Sketch</h1>
-                    </header>
-                    <div class="functions row">
-                        <div class="functions-left column">
-                            <button class="singleColorBtn active">Single color mode</button>
-                            <button class="randomColorBtn">Random color mode</button>
-                            <button class="eraserBtn">Eraser</button>
-                            <button class="clearBtn">Clear</button>
-                            <div class="sliderDiv row">
-                                <label class="sliderLable row" for=".slider">Pixels</label>
-                                <div class="sliderDiv-content column">
-                                    <p class="pixelInfo row">16 x 16</p>
-                                    <input type="range" min="1" max="60" value="16" class="slider">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="functions-right row">
-                            <input class="colorChoiceBtn" type="color" value="#00aaff">
-                        </div>
-                    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Etch A Sketch game</title>
+    <!-- link font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=VT323"
+      rel="stylesheet"
+    />
+    <!-- link my css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/backbone.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/colorPicker.css" />
+    <!-- link my js -->
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body class="column nowrap">
+    <div class="block1 row">
+      <div class="block1-content row">
+        <div class="block1-left column">
+          <header class="row">
+            <h1 class="title">Etch A Sketch</h1>
+          </header>
+          <div class="functions row">
+            <div class="functions-left column">
+              <button class="singleColorBtn active">Single color mode</button>
+              <button class="randomColorBtn">Random color mode</button>
+              <button class="eraserBtn">Eraser</button>
+              <button class="clearBtn">Clear</button>
+              <div class="sliderDiv row">
+                <label class="sliderLable row" for=".slider">Pixels</label>
+                <div class="sliderDiv-content column">
+                  <p class="pixelInfo row">16 x 16</p>
+                  <input
+                    type="range"
+                    min="1"
+                    max="60"
+                    value="16"
+                    class="slider"
+                  />
                 </div>
-                <div class="block1-right sketchBoard row"></div>
+              </div>
             </div>
+            <div class="functions-right row">
+              <input class="colorChoiceBtn" type="color" value="#00aaff" />
+            </div>
+          </div>
         </div>
+        <div class="block1-right sketchBoard row"></div>
+      </div>
+    </div>
 
-        <footer class="footer row">
-            <p>Copyright © <a target="_blank" rel="noopener noreferrer" href="https://vietducng.github.io/">Viet Nguyen</a> 2025</p>
-        </footer>
-    </body>
+    <footer class="footer row">
+      <p>
+        Copyright ©
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://vietducng.github.io/"
+          >Viet Nguyen</a
+        >
+        2025
+      </p>
+    </footer>
+  </body>
 </html>

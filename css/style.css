@@ -1,12 +1,16 @@
+html {
+    font-size: 40px;
+}
+
 @media (max-width: 1024px) {
   html {
-    font-size: 15px; /* Tablet */
+    font-size: 35px; /* Tablet */
   }
 }
 
 @media (max-width: 768px) {
   html {
-    font-size: 14px; /* Mobile */
+    font-size: 30px; /* Mobile */
   }
 }
 
