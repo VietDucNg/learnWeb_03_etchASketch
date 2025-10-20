@@ -31,8 +31,8 @@ button {
     border: 1px solid #eeeeee;
     background-color: #101720;
     color: #eeeeee;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 0.2rem;
+    border-radius: 0.2rem;
     transition: all 0.2s ease;
 }
 
